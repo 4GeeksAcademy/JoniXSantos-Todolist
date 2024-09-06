@@ -15,6 +15,7 @@ const Home = () => {
 						onChange={(e) => setInputValue(e.target.value)}
 						onKeyDown={(e) => {
 							if (e.key === "Enter") {
+								if (inputValue.trim()==="") return
 								setToDo(toDo.concat([inputValue]));
 								setInputValue('');
 							}
